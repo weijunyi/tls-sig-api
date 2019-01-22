@@ -1,31 +1,35 @@
 # TLSAPI
 
-## ¸ÅÊö
+## æ¦‚è¿°
 
-example ¸÷ÖÖĞÎÊ½½Ó¿ÚµÄÊ¹ÓÃ demo¡£
+example å„ç§å½¢å¼æ¥å£çš„ä½¿ç”¨ demoã€‚
 
-src °üº¬ÁË±àÒë¸÷ÖÖĞÎÊ½½Ó¿ÚµÄÔ´ÎÄ¼ş£¨²»°üÀ¨ java£©¡£
+src åŒ…å«äº†ç¼–è¯‘å„ç§å½¢å¼æ¥å£çš„æºæ–‡ä»¶ï¼ˆä¸åŒ…æ‹¬ javaï¼‰ã€‚
 
-java °üº¬ÁË java ÓïÑÔµÄ½Ó¿Ú´úÂë¡£ÆäÖĞtls_sigcheck.javaÊÇjniµÄ½Ó¿Ú
+java åŒ…å«äº† java è¯­è¨€çš„æ¥å£ä»£ç ã€‚å…¶ä¸­tls_sigcheck.javaæ˜¯jniçš„æ¥å£
 
-ÒÀÀµopenssl¡¢zlib£¬²âÊÔÒÀÀµgtest
+ä¾èµ–opensslã€zlibï¼Œæµ‹è¯•ä¾èµ–gtest
 
-## ¹¹½¨
+## æ„å»º
 
-Ê¹ÓÃcmake¹¹½¨
+ä½¿ç”¨cmakeæ„å»º
 
 ```shell
+git clone https://github.com/tencentyun/tls-sig-api.git
+cd tls-sig-api
+git submodule update --init --recursive
+cd ..
 mkdir build
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX={install_path}
 make install
 ```
 
-¹¹½¨Íê³Éºó¿ÉÔÚinstall_pathÖĞ¿´µ½¸÷ÖÖ½á¹û
+æ„å»ºå®Œæˆåå¯åœ¨install_pathä¸­çœ‹åˆ°å„ç§ç»“æœ
 
-### cmakeÑ¡Ïî
+### cmakeé€‰é¡¹
 
-* BUILD_JAVA=ON ¹¹½¨java°ü ĞèÒªÉèÖÃJAVA_HOME»·¾³±äÁ¿
-* BUILD_JNI=ON ¹¹½¨jniµÄso ĞèÒªÉèÖÃJAVA_HOME»·¾³±äÁ¿
-* BUILD_EXAMPLE_JAVA=ON ¹¹½¨java example ĞèÒªÉèÖÃJAVA_HOME»·¾³±äÁ¿
-* BUILD_EXAMPLE_CS=ON ĞèÒª°²×°c#±àÒëÆ÷
+* BUILD_JAVA=ON æ„å»ºjavaåŒ… éœ€è¦è®¾ç½®JAVA_HOMEç¯å¢ƒå˜é‡
+* BUILD_JNI=ON æ„å»ºjniçš„so éœ€è¦è®¾ç½®JAVA_HOMEç¯å¢ƒå˜é‡
+* BUILD_EXAMPLE_JAVA=ON æ„å»ºjava example éœ€è¦è®¾ç½®JAVA_HOMEç¯å¢ƒå˜é‡
+* BUILD_EXAMPLE_CS=ON éœ€è¦å®‰è£…c#ç¼–è¯‘å™¨
